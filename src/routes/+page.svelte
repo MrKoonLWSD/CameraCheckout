@@ -17,7 +17,7 @@
 </style>
 <script>
   function checkOut(camNumber) {
-    alert(camNumber);
+    var checkoutName = prompt("Name?");
   }
 </script>
 <div class="container">
@@ -32,5 +32,4 @@
     <button type="button" class="btn btn-primary" on:click="{()=> { checkOut(17)}}">Camera 17</button>
     <button type="button" class="btn btn-primary" on:click="{()=> { checkOut(21)}}">Camera 21</button>
   </div>
-  Name: <input type="text" name="checkoutName" id=name>
 </div>
