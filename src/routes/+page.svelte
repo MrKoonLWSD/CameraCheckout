@@ -23,12 +23,14 @@
 
     if(!checkedOut.includes(camId)) {
       checkedOut.push(camId);
-    } else {
       let checkoutName = prompt("Name?");
+      let checkoutId = await checkoutCamera(camId, checkoutName);
+    } else {
       let index = checkedOut.indexOf(camId);
       checkedOut.splice(index,1);
+      await checkinCamera(camId);
     }
-    await checkoutCamera(camId, checkoutName);
+   
   }
 </script>
 <div class="container">
