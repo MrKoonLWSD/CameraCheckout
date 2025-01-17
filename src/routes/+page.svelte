@@ -17,7 +17,7 @@
 </style>
 <script>
   let checkedOut = $state([]);
-  function checkOut(camNumber) {
+  async function checkOut (camNumber) {
     
     let camId = "#cam" + camNumber;
 
@@ -28,6 +28,7 @@
       let index = checkedOut.indexOf(camId);
       checkedOut.splice(index,1);
     }
+    await checkoutCamera(camId, checkoutName);
   }
 </script>
 <div class="container">
