@@ -12,11 +12,15 @@ class CheckOut {
 };
 
 const checkoutCamera = async(cameraId, name) => {
-    /*
+    
     const rec = await pb.collection('Checkouts').create( {
         cameraId=cameraId,
         checkoutName = name,
         checkoutTime = new Date().toUTCString()
-    }); */
-    //return rec.id;
+    }); 
+    return rec.id;
+};
+
+const checkinCamera = async(id) => {
+
 };
